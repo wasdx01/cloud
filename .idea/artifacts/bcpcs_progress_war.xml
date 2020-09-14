@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="bcpcs-progress:war">
+    <output-path>$PROJECT_DIR$/bcpcs-progress/target</output-path>
+    <root id="archive" name="bcpcs-progress-1.0.war">
+      <element id="artifact" artifact-name="bcpcs-progress:war exploded" />
+    </root>
+  </artifact>
+</component>

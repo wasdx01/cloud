@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.bochao.system.role.mapper.RoleMapper" >
+  <resultMap id="BaseResultMap" type="com.bochao.system.role.entity.Role" >
+    <id column="ROLE_CODE" property="roleCode" jdbcType="INTEGER" />
+    <result column="ID" property="id" jdbcType="INTEGER" />
+    <result column="ORG_ID" property="orgId" jdbcType="INTEGER" />
+    <result column="ROLE_NAME" property="roleName" jdbcType="VARCHAR" />
+    <result column="DATA_SCOPE" property="dataScope" jdbcType="INTEGER" />
+    <result column="CREATE_BY" property="createBy" jdbcType="INTEGER" />
+    <result column="CREATE_DATE" property="createDate" jdbcType="DATE" />
+    <result column="MEMO" property="memo" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    ROLE_CODE, ID, ORG_ID, ROLE_NAME, DATA_SCOPE, CREATE_BY, CREATE_DATE, MEMO
+  </sql>
+  
+
+</mapper>

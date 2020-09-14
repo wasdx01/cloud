@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/bcpcs-common/bcpcs-common.iml" filepath="$PROJECT_DIR$/bcpcs-common/bcpcs-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bcpcs-config/bcpcs-config.iml" filepath="$PROJECT_DIR$/bcpcs-config/bcpcs-config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bcpcs-eureka/bcpcs-eureka.iml" filepath="$PROJECT_DIR$/bcpcs-eureka/bcpcs-eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bcpcs-file/bcpcs-file.iml" filepath="$PROJECT_DIR$/bcpcs-file/bcpcs-file.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bcpcs-gateway/bcpcs-gateway.iml" filepath="$PROJECT_DIR$/bcpcs-gateway/bcpcs-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bcpcs-progress/bcpcs-progress.iml" filepath="$PROJECT_DIR$/bcpcs-progress/bcpcs-progress.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bcpcs-project/bcpcs-project.iml" filepath="$PROJECT_DIR$/bcpcs-project/bcpcs-project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bcpcs-system/bcpcs-system.iml" filepath="$PROJECT_DIR$/bcpcs-system/bcpcs-system.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bcpsc-auth/bcpsc-auth.iml" filepath="$PROJECT_DIR$/bcpsc-auth/bcpsc-auth.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bcpcs-common/common-mq-service/common-mq-service.iml" filepath="$PROJECT_DIR$/bcpcs-common/common-mq-service/common-mq-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bcpcs-common/common-util/common-util.iml" filepath="$PROJECT_DIR$/bcpcs-common/common-util/common-util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/constructCloud.iml" filepath="$PROJECT_DIR$/.idea/constructCloud.iml" />
+    </modules>
+  </component>
+</project>

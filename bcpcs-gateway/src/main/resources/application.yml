@@ -1,0 +1,66 @@
+server:
+  port: 9003
+swagger:
+  title: bcpcs-gateway
+  description: wangguan
+spring:
+  profiles:
+    active: dev
+  application:
+    name: bcpcs-gateway
+  cloud:
+#    config:
+#      fail-fast: true
+#      discovery:
+#        service-id: BCPCS-CONFIG
+#        enabled: true
+#      label: ${spring.profiles.active}
+#      profile: ${spring.profiles.active}
+#      username: admin
+#      password: admin
+    #开启自动路由
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+      routes: #配置路由规则
+#        - id: auth
+#          uri: lb://bcpsc-auth
+#          predicates:
+#            - Path=/auth/**
+#          filters:
+#            - StripPrefix=1
+  #redis配置
+  redis:
+    host: 192.168.110.212
+    password:
+    port: 6379
+    database: 0
+    timeout: 30000
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: http://192.168.110.212:9002/pub-key/jwt.json
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://root:root@192.168.110.212:8761/eureka/
+  instance:
+    prefer-ip-address: true
+#    instance-id: ${spring.application.name}:192.168.110.212:${server.port}
+
+bcpcs:
+  security:
+    ignored: |
+      /favicon.ico,/bcpcs-auth/login,/auth/login,/bcpcs-system/swagger-ui.html,/bcpcs-system/v2/**,/bcpcs-system/swagger-resources/**
+    notRole: |
+      /user,/user/permission/all
+
+ribbon:
+  eureka:
+    enabled: true
+feign:
+  hystrix:
+   enabled: false

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="bcpsc-auth:war">
+    <output-path>$PROJECT_DIR$/bcpsc-auth/target</output-path>
+    <root id="archive" name="bcpcs-auth.war">
+      <element id="artifact" artifact-name="bcpsc-auth:war exploded" />
+    </root>
+  </artifact>
+</component>

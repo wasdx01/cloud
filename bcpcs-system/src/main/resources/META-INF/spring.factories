@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.bochao.common.swagger.SwaggerConfig,\
+com.bochao.common.config.GlobalExceptionHandler

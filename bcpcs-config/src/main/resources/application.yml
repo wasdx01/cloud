@@ -1,0 +1,21 @@
+server:
+  port: 8080
+
+spring:
+  profiles:
+    active: dev
+  application:
+    name: @pom.artifactId@
+  rabbitmq:
+    host: 192.168.110.131
+    port: 15672
+    username: guest
+    password: guest
+  boot:
+    admin:
+      username: admin
+      password: admin
+  security:
+    user:
+      name: admin
+      password: admin

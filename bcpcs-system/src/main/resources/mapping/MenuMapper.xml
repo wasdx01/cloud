@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.bochao.system.menu.mapper.MenuMapper">
+    <resultMap id="BaseResultMap" type="com.bochao.system.menu.entity.Menu">
+        <id column="ID" property="id" jdbcType="INTEGER"/>
+        <result column="PARENT_ID" property="parentId" jdbcType="INTEGER"/>
+        <result column="PARENT_IDS" property="parentIds" jdbcType="VARCHAR"/>
+        <result column="MENU_NAME" property="menuName" jdbcType="VARCHAR"/>
+        <result column="MENU_URL" property="menuUrl" jdbcType="VARCHAR"/>
+        <result column="MENU_ICON" property="menuIcon" jdbcType="VARCHAR"/>
+        <result column="SORT_NUM" property="sortNum" jdbcType="INTEGER"/>
+        <result column="IS_SHOW" property="isShow" jdbcType="INTEGER"/>
+        <result column="PERMISSION" property="permission" jdbcType="VARCHAR"/>
+        <result column="LOGIN_TYPE" property="loginType" jdbcType="INTEGER"/>
+        <result column="CREATE_BY" property="createBy" jdbcType="INTEGER"/>
+        <result column="CREATE_DATE" property="createDate" jdbcType="DATE"/>
+        <result column="MEMO" property="memo" jdbcType="VARCHAR"/>
+    </resultMap>
+    <resultMap id="PermissionMap" type="com.bochao.common.entity.Permission">
+        <result column="MENU_NAME" property="authName" jdbcType="VARCHAR"/>
+        <result column="MENU_URL" property="requestUrl" jdbcType="VARCHAR"/>
+        <result column="LOGIN_TYPE" property="loginType" jdbcType="INTEGER"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        ID, PARENT_ID, PARENT_IDS, MENU_NAME, MENU_URL, MENU_ICON, SORT_NUM, IS_SHOW, PERMISSION,
+        LOGIN_TYPE,CREATE_BY, CREATE_DATE, MEMO
+    </sql>
+
+    <select id="listByRole" resultMap="PermissionMap">
+        select MENU_NAME, MENU_URL, LOGIN_TYPE
+        from s_menu a left join s_role_menu b on a.ID = b.MENU_ID
+        where b.ROLE_CODE = #{roleCode,jdbcType=INTEGER} AND MENU_URL is not null
+    </select>
+
+
+</mapper>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="bcpcs-config" />
+        <module name="bcpcs-eureka" />
+        <module name="bcpcs-file" />
+        <module name="bcpcs-gateway" />
+        <module name="bcpcs-progress" />
+        <module name="bcpcs-project" />
+        <module name="bcpcs-system" />
+        <module name="bcpsc-auth" />
+        <module name="common-mq-service" />
+        <module name="common-util" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="bcpcs-common" target="1.8" />
+      <module name="bcpcs-config" target="1.7" />
+      <module name="bcpcs-eureka" target="1.8" />
+      <module name="bcpcs-file" target="1.8" />
+      <module name="bcpcs-gateway" target="1.8" />
+      <module name="bcpcs-model" target="1.8" />
+      <module name="bcpcs-progress" target="1.8" />
+      <module name="bcpcs-project" target="1.8" />
+      <module name="bcpcs-system" target="1.8" />
+      <module name="bcpsc-auth" target="1.8" />
+      <module name="common-mq-service" target="1.8" />
+      <module name="common-util" target="1.8" />
+      <module name="constructCloud" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

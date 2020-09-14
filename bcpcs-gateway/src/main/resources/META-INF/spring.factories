@@ -1,0 +1,4 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.bochao.gateway.config.SecurityConfig,\
+com.bochao.gateway.config.RedisConfig,\
+com.bochao.gateway.util.PermissionUtil

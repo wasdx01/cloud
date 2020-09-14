@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bcpcs-common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bcpcs-common/common-mq-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bcpcs-common/common-util" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bcpcs-config" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bcpcs-eureka" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bcpcs-file" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bcpcs-gateway" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bcpcs-model" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bcpcs-progress" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bcpcs-project" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bcpcs-system" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bcpsc-auth" charset="UTF-8" />
+  </component>
+</project>

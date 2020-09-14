@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.bochao.file.mapper.FileInfoMapper">
+    <resultMap id="BaseResultMap" type="com.bochao.common.entity.FileInfo">
+        <id column="id" property="id" jdbcType="VARCHAR"/>
+        <result column="file_id" property="id"></result>
+        <result column="md5" property="md5"></result>
+        <result column="ref_count" property="refCount"></result>
+        <result column="file_name" property="fileName"></result>
+        <result column="file_suffix" property="fileSuffix"></result>
+        <result column="file_size" property="fileSize"></result>
+        <result column="storePath" property="storePath"></result>
+        <result column="file_store_name" property="fileStoreName"></result>
+        <result column="creatDate" property="createTime"></result>
+    </resultMap>
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+        delete from p_fileinfo
+        where file_id=#{id}
+    </delete>
+
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String">
+       select * from p_fileinfo
+        where file_id=#{id}
+    </select>
+
+    <insert id="saveFile">
+        insert into p_fileinfo
+        (file_id, md5, ref_count, file_name,file_suffix,file_size,storePath,file_store_name,creatDate)
+        values
+          (#{id,jdbcType=VARCHAR},#{md5,jdbcType=VARCHAR},
+             #{refCount,jdbcType=INTEGER},#{fileName,jdbcType=VARCHAR},
+             #{fileSuffix,jdbcType=VARCHAR},#{fileSize,jdbcType=VARCHAR},
+             #{storePath,jdbcType=VARCHAR},#{fileStoreName,jdbcType=VARCHAR},
+             #{createTime,jdbcType=DATE})
+    </insert>
+
+    <delete id="delFileByIds">
+        delete from p_fileinfo
+        where file_id in
+        <foreach item="item" index="index" collection="list" open="(" separator="," close=")">
+            #{item,jdbcType=VARCHAR}
+        </foreach>
+    </delete>
+
+    <select id="getAllFileByIds">
+        select from p_fileinfo
+        where file_id in
+        <foreach item="item" index="index" collection="list" open="(" separator="," close=")">
+            #{item,jdbcType=VARCHAR}
+        </foreach>
+    </select>
+</mapper>

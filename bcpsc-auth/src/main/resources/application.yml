@@ -1,0 +1,50 @@
+server:
+  port: 9002
+spring:
+  profiles:
+    active: dev
+  application:
+    name: bcpcs-auth
+  cloud:
+#    config:
+#      fail-fast: true
+#      discovery:
+#        service-id: BCPCS-CONFIG
+#        enabled: true
+#      label: ${spring.profiles.active}
+#      profile: ${spring.profiles.active}
+#      username: admin
+#      password: admin
+  #redis配置
+  redis:
+    host: 192.168.110.212
+    password:
+    port: 6379
+    database: 0
+    timeout: 30000
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://root:root@192.168.110.212:8761/eureka/
+  instance:
+    prefer-ip-address: true
+#    instance-id: ${spring.application.name}:192.168.110.212:${server.port}
+swagger:
+  title: bcpcs-auth
+  description: bcpcs-auth
+
+
+bspcs:
+  auth:
+    server:
+      maxClient: 30000
+      tokenValid: 14400
+      force: false
+      startRefresh: false
+      keyPath: classpath:czq.jks
+      alias: wecode
+      secret: wecodeCloud
+ribbon:
+  eureka:
+    enabled: true
